@@ -103,7 +103,7 @@ st.markdown("""
 @st.cache_data
 def load_dropdown_data():
     """Loads the list of proteins for the dropdown with safety cleaning"""
-    path = 'notebooks\\protein_dropdown.csv'
+    path = 'notebooks/protein_dropdown.csv'
     if os.path.exists(path):
         try:
             df = pd.read_csv(path)
@@ -119,7 +119,7 @@ def load_dropdown_data():
 @st.cache_data
 def load_feature_database():
     """Loads the full dataset to fetch features for prediction"""
-    path = 'notebooks\\Full_database.csv'
+    path = 'notebooks/Full_database.csv'
     if os.path.exists(path):
         return pd.read_csv(path)
     return pd.DataFrame()
@@ -130,16 +130,16 @@ def load_resources():
     resources = {}
     try:
         # Load Scaler
-        if os.path.exists('work_trials\\scaler.pkl'):
-            resources['scaler'] = joblib.load('work_trials\\scaler.pkl')
+        if os.path.exists('work_trials/scaler.pkl'):
+            resources['scaler'] = joblib.load('work_trials/scaler.pkl')
         
         # Load XGBoost 
-        if os.path.exists('work_trials\\xgb_essentiality_final.pkl'):
-            resources['XGBoost'] = joblib.load('work_trials\\xgb_essentiality_final.pkl')
+        if os.path.exists('work_trials/xgb_essentiality_final.pkl'):
+            resources['XGBoost'] = joblib.load('work_trials/xgb_essentiality_final.pkl')
         
         # Load Random Forest 
-        if os.path.exists('work_trials\\rf_essentiality_final.pkl'):
-            resources['Random Forest'] = joblib.load('work_trials\\rf_essentiality_final.pkl')
+        if os.path.exists('work_trials/rf_essentiality_final.pkl'):
+            resources['Random Forest'] = joblib.load('work_trials/rf_essentiality_final.pkl')
             
     except Exception as e:
         st.error(f"Error loading models: {e}")
