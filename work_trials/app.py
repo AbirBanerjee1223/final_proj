@@ -103,7 +103,7 @@ st.markdown("""
 @st.cache_data
 def load_dropdown_data():
     """Loads the list of proteins for the dropdown with safety cleaning"""
-    path = 'D:\\python_progs\\final_proj\\notebooks\\protein_dropdown.csv'
+    path = 'notebooks\\protein_dropdown.csv'
     if os.path.exists(path):
         try:
             df = pd.read_csv(path)
@@ -119,7 +119,7 @@ def load_dropdown_data():
 @st.cache_data
 def load_feature_database():
     """Loads the full dataset to fetch features for prediction"""
-    path = 'D:\\python_progs\\final_proj\\notebooks\\Full_database.csv'
+    path = 'notebooks\\Full_database.csv'
     if os.path.exists(path):
         return pd.read_csv(path)
     return pd.DataFrame()
