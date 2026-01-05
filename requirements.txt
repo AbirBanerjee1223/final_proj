@@ -10,3 +10,4 @@ scipy
 plotly
 google.generativeai
 joblib
+dotenv
