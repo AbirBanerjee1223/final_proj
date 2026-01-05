@@ -130,16 +130,16 @@ def load_resources():
     resources = {}
     try:
         # Load Scaler
-        if os.path.exists('scaler.pkl'):
-            resources['scaler'] = joblib.load('scaler.pkl')
+        if os.path.exists('work_trials\\scaler.pkl'):
+            resources['scaler'] = joblib.load('work_trials\\scaler.pkl')
         
         # Load XGBoost 
-        if os.path.exists('xgb_essentiality_final.pkl'):
-            resources['XGBoost'] = joblib.load('xgb_essentiality_final.pkl')
+        if os.path.exists('work_trials\\xgb_essentiality_final.pkl'):
+            resources['XGBoost'] = joblib.load('work_trials\\xgb_essentiality_final.pkl')
         
         # Load Random Forest 
-        if os.path.exists('rf_essentiality_final.pkl'):
-            resources['Random Forest'] = joblib.load('rf_essentiality_final.pkl')
+        if os.path.exists('work_trials\\rf_essentiality_final.pkl'):
+            resources['Random Forest'] = joblib.load('work_trials\\rf_essentiality_final.pkl')
             
     except Exception as e:
         st.error(f"Error loading models: {e}")
